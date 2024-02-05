@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { RegisterService } from '../services/register.service';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [],
+ 
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  constructor(public nav:RegisterService){
+    this.nav.show()
+  }
 }

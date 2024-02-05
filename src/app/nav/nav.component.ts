@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AsyncPipe, NgIf } from '@angular/common';
+import { RegisterService } from '../services/register.service';
 
 @Component({
   selector: 'app-nav',
@@ -17,4 +18,8 @@ export class NavComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+    constructor(public nav:RegisterService){
+      this.nav.hide()
+    }
 }

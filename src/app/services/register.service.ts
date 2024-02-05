@@ -9,18 +9,20 @@ import { environment } from '../../environments/environment';
 export class RegisterService {
 
  api_key:string=`4d7853a2-965f-11ee-8cbb-0200cd936042`;
-
+visibility=true;
+hide(){
+  this.visibility=false;
+}
+show(){
+  this.visibility=false;
+}
 baseUrl:any=environment.apiurl;
-  constructor(private http:HttpClient) { }
-  signup(data:any):Observable<any>{
-    return this.http.post(this.baseUrl+`members`,data)
-  }
-  getsignup(data:any):Observable<any>{
-    return this.http.get(this.baseUrl+`members`,data)
-  }
-   signin(data:any):Observable<any>{
-    return this.http.post(this.baseUrl+`auth/login`,data)
-  }
+  constructor(private http:HttpClient) {
+    this.visibility=false;
+   }
+  loginAdmin(data:any):Observable<any>{
+    return this.http.post(this.baseUrl + `customers/adminLogin`, data);
+    }
 
   
 }
