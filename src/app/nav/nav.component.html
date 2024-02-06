@@ -27,7 +27,11 @@
         <button mat-button  class="nav-items">About</button>
         <button mat-button  class="nav-items">Company</button>
         <button mat-button  class="nav-items">Blog</button>
-        <button mat-button  class="nav-items" routerLinkActive="is-active">Login</button>
+        <!-- {{this.ls.getUser()}} -->
+        <button mat-button  class="nav-items" (click)="logout()"
+         routerLinkActive="is-active" *ngIf="ls.getUser()">Logout</button>
+        <button mat-button  class="nav-items" routerLink="/"
+         routerLinkActive="is-active" *ngIf="!ls.getUser()">Login</button>
       </div>
       <!-- <div *ngIf="!nav.hide"> -->
       <!-- <span class="example-spacer" ></span>

@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
+import { AuthGuard } from './services/auth.guard';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/mater
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000 ,horizontalPosition: 'end',
     verticalPosition: 'top',} },
+    
   ],
   bootstrap: [AppComponent]
 })

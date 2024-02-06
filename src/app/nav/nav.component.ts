@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { RegisterService } from '../services/register.service';
+import { LocalstorageService } from '../services/localstorage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -18,8 +20,19 @@ export class NavComponent {
       map(result => result.matches),
       shareReplay()
     );
+  user: any=null;
 
-    constructor(public nav:RegisterService){
-      this.nav.hide()
+    constructor(public nav:RegisterService,private router:Router,public ls:LocalstorageService){
+      this.nav.show()
+      this.user= this.ls.getData('user')
+      if(this.user){
+
+        // alert(this.user.IsActive)
+      }
+    }
+    logout(){
+      localStorage.clear();
+      this.router.navigateByUrl('')
+
     }
 }
