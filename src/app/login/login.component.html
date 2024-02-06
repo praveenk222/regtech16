@@ -10,7 +10,7 @@
             <label for="exampleFormControlInput1" class="form-label">Email address or phonenumber</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type your email or phonenumber" formControlName="UserID">
             <div *ngIf="loginForm.get('UserID')?.invalid && loginForm.get('UserID')?.touched" class="error">
-              <div  *ngIf="loginForm.get('UserID')?.hasError('required')">Email required</div>
+              <div  *ngIf="loginForm.get('UserID')?.hasError('required')">Email ID is requied</div>
               <div  *ngIf="loginForm.get('UserID')?.hasError('pattern')">InValid Email</div>
             </div>
           </div>
@@ -18,7 +18,7 @@
           <label for="inputPassword5" class="form-label">Password</label>
           <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter your password" formControlName="Password">
           <div *ngIf="loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched" class="error">
-            <div  *ngIf="loginForm.get('Password')?.hasError('required')">Password required</div>
+            <div  *ngIf="loginForm.get('Password')?.hasError('required')">Password is requied</div>
             <div  *ngIf="loginForm.get('Password')?.hasError('pattern')">InValid Password</div>
           </div>
          <br>
@@ -32,7 +32,7 @@
             <img class="btn-light" src="https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?fit=1000%2C1000&ssl=1" alt="">
           </button>
           <button type="button" style="background: none;border: none;">
-            <img class="btn-light" src="https://www.pngmart.com/files/10/Apple-Logo-PNG-File.png" alt="">
+            <img class="btn-light" src="https://purepng.com/public/uploads/large/21502362885rmhziap3wm5w0jogfdubr1fgyzuycu5rqkam39wjhh7yhmcncxka3vxq3xglitq4iwze8v0gpi1wmolyrtqkts57kit8ibyd2apb.png" alt="">
           </button>
           <button type="button" style="background: none;border: none;">
             <img class="btn-light" src="https://th.bing.com/th/id/R.96140b2bc2a8707f982d7bcbc1b06ab4?rik=r8q44CfUfbpzkA&riu=http%3a%2f%2fgetdrawings.com%2ffree-icon%2ffacebook-icon-png-transparent-background-53.png&ehk=2tiJQQx4DLVFgK6Qrt4FKP3hzJlJqEIgm4u7BBmS3P0%3d&risl=&pid=ImgRaw&r=0" alt="">

@@ -36,7 +36,7 @@ export class LoginComponent {
     const data = this.loginForm.value;
     console.log(data)
     if (!this.loginForm.valid) {
-      return;
+      this.loginForm.markAllAsTouched()
 
 
     } else {
