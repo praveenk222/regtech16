@@ -19,6 +19,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatRipple, MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    HeaderComponent,
     
   ],
   imports: [
