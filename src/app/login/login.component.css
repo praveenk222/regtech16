@@ -105,3 +105,14 @@ background: whitesmoke;border: 2px solid rgb(204, 197, 197);border-radius: 100%;
     height: 60px;
     border-radius: 5px;
   }
+  .form-control{
+    width: 100px;
+  }
+  .example-spacer{
+    flex: 1 0 0;
+  }
+  .nav-containe{
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  }

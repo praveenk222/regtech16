@@ -8,11 +8,12 @@
     <button mat-button  routerLinkActive="is-active" class="nav-items">Company</button>
     <button mat-button  routerLinkActive="is-active" class="nav-items">Blog</button>
     <!-- {{this.ls.getUser()}} -->
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" *ngIf="ls.getUser()">
+
     <button mat-raised-button  class="nav-items" (click)="logout()"
-     routerLinkActive="is-active" *ngIf="ls.getUser()">Logout</button>
+     routerLinkActive="is-active" *ngIf="ls.getUser()"> Logout</button>
     <button mat-raised-button  class="nav-items" routerLink="/"
      routerLinkActive="is-active" *ngIf="!ls.getUser()">Login</button>
+     <button class="">    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" ></button>
   </div>
   <!-- <div *ngIf="!nav.hide"> -->
   <!-- <span class="example-spacer" ></span>
