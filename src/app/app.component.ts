@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -8,7 +9,17 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AppComponent {
   title = 'regtech';
-  constructor(private spinner: NgxSpinnerService) {
+  showheader:boolean=false;
+  constructor(private router:Router) {
+    router.events.subscribe((val)=>{
+      if(val instanceof NavigationEnd){
+        if(val.url == '/' ){
+          this.showheader=true
+        }else{
+          // this.showheader=false;
+        }
+      }
+    })
   }
 
  
