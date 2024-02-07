@@ -3,16 +3,13 @@
     <div class="child">
       <img class="child1" src="https://www.cloverdx.com/hubfs/cdx-deco-capital-market.svg" alt="">
     </div>
-    <div class="child">
+    <div class="child2">
         <h2>Welcome back !</h2>
         <h3>Login into your account</h3>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address or phonenumber</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type your email or phonenumber" formControlName="UserID">
-            <div *ngIf="loginForm.get('UserID')?.invalid && loginForm.get('UserID')?.touched" class="error">
-              <div  *ngIf="loginForm.get('UserID')?.hasError('required')">Email ID is requied</div>
-              <div  *ngIf="loginForm.get('UserID')?.hasError('pattern')">InValid Email</div>
-            </div>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your email or phonenumber" formControlName="UserID">
+         
           </div>
 
           <label for="inputPassword5" class="form-label">Password</label>
@@ -23,19 +20,19 @@
           </div>
          <br>
          <a href="" style="float: right;margin-top: -10px;">Forgot password</a><br>
-          <button type="button" class="submit" (click)="login()">Signin</button>
+          <button matRipple type="button" class="submit" (click)="login()">Signin</button>
        <br><br>
           <div class="separator">Or do it any other account</div>
   
           <div class="container">
-          <button type="button" style="background: none;border: none;">
-            <img class="btn-light" src="https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?fit=1000%2C1000&ssl=1" alt="">
+          <button type="button" class="icon-btn" matRipple>
+            <img class="btn-light" src="./assets/google.png" alt="">
           </button>
-          <button type="button" style="background: none;border: none;">
-            <img class="btn-light" src="https://purepng.com/public/uploads/large/21502362885rmhziap3wm5w0jogfdubr1fgyzuycu5rqkam39wjhh7yhmcncxka3vxq3xglitq4iwze8v0gpi1wmolyrtqkts57kit8ibyd2apb.png" alt="">
+          <button type="button" class="icon-btn" matRipple>
+            <img class="btn-light" src="./assets/apple-logo.png" alt="">
           </button>
-          <button type="button" style="background: none;border: none;">
-            <img class="btn-light" src="https://th.bing.com/th/id/R.96140b2bc2a8707f982d7bcbc1b06ab4?rik=r8q44CfUfbpzkA&riu=http%3a%2f%2fgetdrawings.com%2ffree-icon%2ffacebook-icon-png-transparent-background-53.png&ehk=2tiJQQx4DLVFgK6Qrt4FKP3hzJlJqEIgm4u7BBmS3P0%3d&risl=&pid=ImgRaw&r=0" alt="">
+          <button type="button" class="icon-btn" matRipple>
+            <img class="btn-light" src="./assets/facebook.png" alt="">
           </button>
         </div>
         <div class="container1">
@@ -47,4 +44,4 @@
    
 </div>
 </form>
-<!-- <ngx-spinner type="ball-scale-multiple"></ngx-spinner> -->
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
