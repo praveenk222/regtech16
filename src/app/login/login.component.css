@@ -149,9 +149,7 @@ background: whitesmoke;border: 2px solid rgb(204, 197, 197);border-radius: 100%;
   
   
   }
-  .form-control{
-    width: 120px;
-  }
+ 
   
   .is-active .nav-items{
     width: 100px !important;
