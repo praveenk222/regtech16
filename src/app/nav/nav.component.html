@@ -11,35 +11,10 @@
     </mat-nav-list> -->
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar style="background-color: #26619c;height: 80px;">
-      <button style="border: none;background: none;"
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-     <img class="logo" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=234,fit=crop,q=95/Yg27LXON92uO5q10/download-mk38Gx89jOUvMxy5.png" alt="">
-      <span class="example-spacer" ></span>
-      <div class="nav-container" >
-        <button mat-button  routerLinkActive="is-active" class="nav-items">Home</button>
-        <button mat-button  routerLinkActive="is-active" class="nav-items">About</button>
-        <button mat-button  routerLinkActive="is-active" class="nav-items">Company</button>
-        <button mat-button  routerLinkActive="is-active" class="nav-items">Blog</button>
-        <!-- {{this.ls.getUser()}} -->
-       
-        <button mat-raised-button  class="nav-items" (click)="logout()"
-         routerLinkActive="is-active" *ngIf="ls.getUser()">Logout</button>
-        <button mat-raised-button  class="nav-items" routerLink="/"
-         routerLinkActive="is-active" *ngIf="!ls.getUser()">Login</button>
-      </div>
-      <!-- <div *ngIf="!nav.hide"> -->
-      <!-- <span class="example-spacer" ></span>
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <a href="" style="text-decoration: none;color: white;">Logout</a> -->
-    <!-- </div> -->
-    </mat-toolbar>
+   
+    <!-- homepage toolbar -->
+   
+    <!-- homepage toolbar -->
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>

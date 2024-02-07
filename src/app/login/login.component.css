@@ -117,3 +117,56 @@ background: whitesmoke;border: 2px solid rgb(204, 197, 197);border-radius: 100%;
   align-items: flex-end;
   justify-content: flex-end;
   }
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .example-spacer{
+    flex:1 0 0;
+  }
+  .nav-items{
+    color: white;
+    font-size: 16px;
+    background: none;
+    border: none;
+    margin: 5px;
+  }
+  .nav-container{
+    color: white;
+  
+  
+  }
+  .form-control{
+    width: 120px;
+  }
+  
+  .is-active .nav-items{
+    width: 100px !important;
+    height: 50px !important;
+   background: white !important;
+  }
+  
+  @media screen and (max-width:400px) {
+    .nav-container{
+      display: none;
+    }
+  }
+  .logo{
+    height: 60px;
+    border-radius: 5px;
+  }
+  
+  

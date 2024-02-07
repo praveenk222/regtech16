@@ -5,7 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { RegisterService } from '../services/register.service';
 import { LocalstorageService } from '../services/localstorage.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -21,15 +21,23 @@ export class NavComponent {
       shareReplay()
     );
   user: any=null;
-
+  isHome:boolean=false;
     constructor(public nav:RegisterService,private router:Router,public ls:LocalstorageService){
       this.nav.show()
-      this.user= this.ls.getData('user')
-      if(this.user){
-
-        // alert(this.user.IsActive)
-      }
+     
+      router.events.subscribe((val)=>{
+        if(val instanceof NavigationEnd){
+          if(val.url == '/home' ){
+            this.isHome=true
+          }else{
+            // this.showheader=false;
+          }
+        }
+      })
     }
+    
+  
+    
     logout(){
       localStorage.clear();
       this.router.navigateByUrl('')
