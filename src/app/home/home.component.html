@@ -3,11 +3,14 @@
 
   <img class="logo" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=234,fit=crop,q=95/Yg27LXON92uO5q10/download-mk38Gx89jOUvMxy5.png" alt="">
    <span class="example-spacer" ></span>
-   <div class="nav-container" >
+   <div>
+
      <button mat-button  routerLinkActive="is-active" class="nav-items">Home</button>
      <button mat-button  routerLinkActive="is-active" class="nav-items">About</button>
      <button mat-button  routerLinkActive="is-active" class="nav-items">Company</button>
      <button mat-button  routerLinkActive="is-active" class="nav-items">Blog</button>
+   </div>
+   <div class="nav-container" >
      <!-- {{this.ls.getUser()}} -->
      <button style="background: none;border: none;">    <input class="form-control1 me-2" type="search" placeholder="Search" aria-label="Search" ></button>
      <button mat-raised-button  class="nav-items" (click)="logout()"
