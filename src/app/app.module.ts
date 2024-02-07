@@ -17,6 +17,8 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/mater
 import { AuthGuard } from './services/auth.guard';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { MatRipple, MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HttpClientModule,
     MatSnackBarModule,
     SweetAlert2Module.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatRippleModule,
+    MatButtonModule
   
   ],
   providers: [

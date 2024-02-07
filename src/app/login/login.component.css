@@ -1,9 +1,12 @@
+
 .parent{
     display: flex;
     flex-flow: wrap row;
     align-items: space-evenly;
     justify-content: space-evenly;
-    padding-top: 5%;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding-top: 2%;
 }
 .container{
     display: flex;
@@ -13,20 +16,33 @@
     padding: 2%;
 }
 .child{
-    width: 500px;
+    width: 800px;
     height: 600px;
+
 
 }
 .child1{
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 600px;
+
+}
+.child2{
+  width: 600px;
+  height: 600px;
+
+
 
 }
 .btn-light{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 100%;
-    margin: 2%;
+    margin: -4%;
+}
+.icon-btn{
+  width: 60px;
+  height: 60px;
+background: whitesmoke;border: 2px solid rgb(204, 197, 197);border-radius: 100%; padding: 2%;margin: 2%;
 }
 .container1{
     display: flex;

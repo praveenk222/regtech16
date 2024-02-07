@@ -27,6 +27,8 @@
 }
 .nav-container{
   color: white;
+
+
 }
 .form-control{
   width: 120px;
@@ -34,6 +36,7 @@
 
 .is-active .nav-items{
   width: 100px !important;
+  height: 50px !important;
  background: white !important;
 }
 
@@ -46,3 +49,4 @@
   height: 60px;
   border-radius: 5px;
 }
+
