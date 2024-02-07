@@ -2,7 +2,7 @@
 <mat-toolbar style="background-color: #26619c;height: 80px;">
 
   <img class="logo" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=234,fit=crop,q=95/Yg27LXON92uO5q10/download-mk38Gx89jOUvMxy5.png" alt="">
-   <span class="example-spacer" ></span>
+  
    <div>
 
      <button mat-button  routerLinkActive="is-active" class="nav-items">Home</button>
@@ -10,9 +10,27 @@
      <button mat-button  routerLinkActive="is-active" class="nav-items">Company</button>
      <button mat-button  routerLinkActive="is-active" class="nav-items">Blog</button>
    </div>
+   <span class="example-spacer" ></span>
    <div class="nav-container" >
      <!-- {{this.ls.getUser()}} -->
-     <button style="background: none;border: none;">    <input class="form-control1 me-2" type="search" placeholder="Search" aria-label="Search" ><mat-icon style="margin-left: -40px;margin-bottom: -5px;">search</mat-icon></button>
+     <button  matBadge="15" matBadgeColor="warn" style="border: none;">    <mat-icon style="margin-bottom: -5px;">message</mat-icon></button>
+     <button style="background: none;border: none;">    <div class="container">
+
+      <div class="row height d-flex justify-content-center align-items-center">
+
+        <div class="col-md-8">
+
+          <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="text" class="form-control" placeholder="Have a question? Ask Now">
+            
+          </div>
+          
+        </div>
+        
+      </div>
+  </div></button>
+
      <button mat-raised-button  class="nav-items" (click)="logout()"
       routerLinkActive="is-active" *ngIf="ls.getUser()"> Logout</button>
      <button mat-raised-button  class="nav-items" routerLink="/"

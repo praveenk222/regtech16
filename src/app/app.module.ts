@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import {MatMenuModule} from '@angular/material/menu';
     NgxSpinnerModule,
     MatRippleModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   
   ],
   providers: [
