@@ -40,8 +40,8 @@ export class LoginComponent {
     console.log(data)
     if (!this.loginForm.valid) {
       this.loginForm.markAllAsTouched()
-
-
+      this.spinner.hide();
+      return;
     } else {
       this._user.loginAdmin(data).subscribe((res: any) => {
         console.log(res)

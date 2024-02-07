@@ -25,9 +25,11 @@
         <h2>Welcome back !</h2>
         <h3>Login into your account</h3>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address or phonenumber</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your email or phonenumber" formControlName="UserID">
-         
+            <label for="exampleFormControlInput1" class="form-label">Email address or phone number</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your email or phone number" formControlName="UserID">
+            <div *ngIf="loginForm.get('UserID')?.invalid && loginForm.get('UserID')?.touched" class="error">
+              <div  *ngIf="loginForm.get('UserID')?.hasError('required')">email or phone number is requied</div>
+            </div>
           </div>
 
           <label for="inputPassword5" class="form-label">Password</label>
