@@ -22,7 +22,7 @@ export class LoginComponent {
     private spinner: NgxSpinnerService,
      private _user: RegisterService, private localStorageService:LocalstorageService) {
     this.loginForm = this._lf.group({
-      UserID: ['', [Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      UserID: ['', [Validators.required]],
       Password: ['', [Validators.required]],
     })
   }
