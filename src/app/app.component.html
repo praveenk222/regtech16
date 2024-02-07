@@ -1,5 +1,8 @@
-<!-- <app-nav></app-nav> -->
+<app-nav *ngIf="!showheader"></app-nav>
 <!-- <app-home></app-home> -->
-<app-landingpage></app-landingpage>
-<router-outlet></router-outlet>
+<!-- <app-landingpage></app-landingpage> -->
+<router-outlet *ngIf="showheader"></router-outlet>
+
+
+
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
