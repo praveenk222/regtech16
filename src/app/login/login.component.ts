@@ -18,13 +18,21 @@ export class LoginComponent {
  
   data: any;
   loginForm: FormGroup;
-  constructor(private _lf: FormBuilder,private route:Router,private snackBar: MatSnackBar,
-    private spinner: NgxSpinnerService,
+  constructor(private _lf: FormBuilder,private route:Router,private snackBar: MatSnackBar,public nav:RegisterService,private router:Router,public ls:LocalstorageService
+    ,private spinner: NgxSpinnerService,
      private _user: RegisterService, private localStorageService:LocalstorageService) {
     this.loginForm = this._lf.group({
       UserID: ['', [Validators.required]],
       Password: ['', [Validators.required]],
+
+
     })
+    this.nav.show()
+    this.user= this.ls.getData('user')
+    if(this.user){
+
+      // alert(this.user.IsActive)
+    }
   }
   login() {
     this.spinner.show()
@@ -71,6 +79,14 @@ export class LoginComponent {
       title: "Oops...",
       text: message,
     });
+  }
+
+  user: any=null;
+
+  logout(){
+    localStorage.clear();
+    this.router.navigateByUrl('')
+
   }
 }
 

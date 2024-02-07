@@ -1,0 +1,26 @@
+.toolbar{
+    background: rgb(56, 54, 49);
+    height: 120px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.example-spacer{
+    flex:1 0 0;
+}
+.na-itms{
+   color: white;
+   text-decoration: none;
+   margin: 20px;
+   background: transparent;
+   border: none;
+
+}
+::ng-deep .dropdown{
+    background: rgb(56, 54, 49) !important;
+
+}
+.dropdown-item{
+    color: white;
+}

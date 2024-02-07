@@ -20,8 +20,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatRipple, MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { HeaderComponent } from './header/header.component';
     RegisterComponent,
     HomeComponent,
     HeaderComponent,
+    LandingpageComponent,
     
   ],
   imports: [
@@ -46,7 +48,8 @@ import { HeaderComponent } from './header/header.component';
     SweetAlert2Module.forRoot(),
     NgxSpinnerModule,
     MatRippleModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   
   ],
   providers: [
